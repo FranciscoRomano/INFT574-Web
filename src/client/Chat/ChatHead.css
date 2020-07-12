@@ -1,0 +1,11 @@
+.app-chat-head {
+    top: 24px;
+    left: 50%;
+    width: calc(100% - 24px);
+    padding: 4px;
+    display: flex;
+    position: fixed;
+    max-width: 800px;
+    align-items: center;
+    transform: translateX(-50%);
+};

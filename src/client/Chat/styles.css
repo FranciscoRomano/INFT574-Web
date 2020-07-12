@@ -1,0 +1,21 @@
+.chat-message {
+    left: 50%;
+    width: calc(100% - 24px);
+    bottom: 24px;
+    padding: 4px;
+    display: flex;
+    position: fixed;
+    max-width: 800px;
+    transform: translateX(-50%);
+    padding-left: 24px;
+};
+
+.chat-messages {
+    left: 50%;
+    bottom: 96px;
+    display: flex;
+    position: fixed;
+    transform: translateX(-50%);
+    overflow-y: auto;
+    overflow-x: hidden;
+};
