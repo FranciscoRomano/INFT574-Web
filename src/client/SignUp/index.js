@@ -15,7 +15,7 @@ export default class SignUp extends React.Component {
 
 	constructor(props) {
 		super(...arguments);
-		this.state = { name: '', email: '', password: '' };
+		this.state = { name: '', email: '', password: '', error: '' };
 	};
 
 	render() {
@@ -27,8 +27,9 @@ export default class SignUp extends React.Component {
 					<Typography variant="subtitle2"> INFT574 Messaging App </Typography>
 				</div>
 				<form className="app-signup-form">
+					<Typography variant="body1" className="app-signin-form-error"> {this.state.error} </Typography>
 					<TextField required label="Name" variant="outlined" value={this.state.name} onChange={this.onChangeNameTextField.bind(this)} />
-					<TextField required label="Email" variant="outlined" value={this.state.email} onChange={this.onChangeEmailTextField.bind(this)} />
+					<TextField required label="Email" variant="outlined" type="email" value={this.state.email} onChange={this.onChangeEmailTextField.bind(this)} />
 					<TextField required label="Password" variant="outlined" type="password" value={this.state.password} onChange={this.onChangePasswordTextField.bind(this)} />
 					<Button variant="contained" size="large" type="submit" onClick={this.onClickSubmit.bind(this)}> SUBMIT </Button>
 					<Button variant="outlined" size="large" onClick={this.onClickBack.bind(this)}> BACK </Button>
@@ -38,7 +39,7 @@ export default class SignUp extends React.Component {
 	}
 
 	onClickBack(e) {
-		this.props.history.replace('signin');
+		this.props.history.replace('/');
 	};
 
 	onClickSubmit(e) {
@@ -46,8 +47,9 @@ export default class SignUp extends React.Component {
 		console.log("FIREBASE :: signing up...");
 		Firebase.SignUp(this.state.name, this.state.email, this.state.password).then(() => {
 			console.log("FIREBASE :: sign up was successful!");
-			this.props.history.replace('/');
+			this.props.history.replace('/chat');
 		}).catch(error => {
+			this.setState({ error: error.message });
 			console.error("FIREBASE ERROR :: sign up was unsuccessful!", error);
 		});
 	};

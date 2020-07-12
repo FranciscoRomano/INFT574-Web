@@ -27,6 +27,10 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 */
 
 import "./styles.css"
+import "./ChatHead.css"
+import "./ChatInput.css"
+import "./ChatMessage.css"
+import "./ChatMessages.css"
 import ChatHead from "./ChatHead"
 import ChatInput from "./ChatInput"
 import ChatMessages from "./ChatMessages"

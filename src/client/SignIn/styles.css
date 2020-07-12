@@ -34,3 +34,10 @@
     margin-top: 56px !important;
     background-color: #0084ff;
 }
+
+.app-signin-form-error {
+    color: #f00 !important;
+    width: 100% !important;
+    /* font-size: 8pt !important; */
+    text-align: center !important;
+}

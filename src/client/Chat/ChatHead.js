@@ -46,10 +46,10 @@ export default class ChatHead extends React.Component {
 	onMenuSignOut(e) {
 		Firebase.SignOut().then(() => {
 			console.log("FIREBASE :: sign out was successfull!");
-			this.props.history.replace('/signin');
+			this.props.history.replace('/');
 		}).catch((error) => {
 			console.log("FIREBASE ERROR :: sign out was unsuccessfull!", error);
-			this.props.history.replace('/signin');
+			this.props.history.replace('/');
 		});
 		this.setState({ toggle: false });
 	};

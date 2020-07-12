@@ -7,6 +7,7 @@ import 'firebase/firebase-firestore'
 class Firebase {
 
     constructor() {
+        
         // initialize firebase app
 		app.initializeApp({
             apiKey: "AIzaSyAN_8ELqyY0KZrzF5eSCzhTshIK2YmxPf4",
