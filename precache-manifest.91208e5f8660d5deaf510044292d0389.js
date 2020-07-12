@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "404e33b586f10ac26e863caabdbefeb8",
+    "revision": "49752deda3cfca4488e1891b2a224d06",
     "url": "/INFT574-Web/index.html"
   },
   {
-    "revision": "9d3d23886de1aa974325",
+    "revision": "13452c4bc97bf242ba01",
     "url": "/INFT574-Web/static/css/main.3ccf834c.chunk.css"
   },
   {
-    "revision": "5ef2789d0b14784006d8",
-    "url": "/INFT574-Web/static/js/2.bc2fe31d.chunk.js"
+    "revision": "c7e449326aba5b83daf8",
+    "url": "/INFT574-Web/static/js/2.32d2f59a.chunk.js"
   },
   {
     "revision": "df29ce23dc71344ae95e2113fe8322a8",
-    "url": "/INFT574-Web/static/js/2.bc2fe31d.chunk.js.LICENSE.txt"
+    "url": "/INFT574-Web/static/js/2.32d2f59a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9d3d23886de1aa974325",
-    "url": "/INFT574-Web/static/js/main.39fb3c46.chunk.js"
+    "revision": "13452c4bc97bf242ba01",
+    "url": "/INFT574-Web/static/js/main.c833cffe.chunk.js"
   },
   {
     "revision": "a5d3ac5539d6eddfaf63",
