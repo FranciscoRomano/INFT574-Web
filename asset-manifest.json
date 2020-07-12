@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/INFT574-Web/static/css/main.a2ef082c.chunk.css",
+    "main.css": "/INFT574-Web/static/css/main.bbafd665.chunk.css",
     "main.js": "/INFT574-Web/static/js/main.6a28d25d.chunk.js",
     "main.js.map": "/INFT574-Web/static/js/main.6a28d25d.chunk.js.map",
     "runtime-main.js": "/INFT574-Web/static/js/runtime-main.1e888d3d.js",
@@ -8,15 +8,15 @@
     "static/js/2.8a0182a4.chunk.js": "/INFT574-Web/static/js/2.8a0182a4.chunk.js",
     "static/js/2.8a0182a4.chunk.js.map": "/INFT574-Web/static/js/2.8a0182a4.chunk.js.map",
     "index.html": "/INFT574-Web/index.html",
-    "precache-manifest.190b5a6d0a398814a7d245cb955946bc.js": "/INFT574-Web/precache-manifest.190b5a6d0a398814a7d245cb955946bc.js",
+    "precache-manifest.38406a28cae04b85e7e1eb7a9555533e.js": "/INFT574-Web/precache-manifest.38406a28cae04b85e7e1eb7a9555533e.js",
     "service-worker.js": "/INFT574-Web/service-worker.js",
-    "static/css/main.a2ef082c.chunk.css.map": "/INFT574-Web/static/css/main.a2ef082c.chunk.css.map",
+    "static/css/main.bbafd665.chunk.css.map": "/INFT574-Web/static/css/main.bbafd665.chunk.css.map",
     "static/js/2.8a0182a4.chunk.js.LICENSE.txt": "/INFT574-Web/static/js/2.8a0182a4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1e888d3d.js",
     "static/js/2.8a0182a4.chunk.js",
-    "static/css/main.a2ef082c.chunk.css",
+    "static/css/main.bbafd665.chunk.css",
     "static/js/main.6a28d25d.chunk.js"
   ]
 }
