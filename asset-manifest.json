@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/INFT574-Web/static/css/main.3ccf834c.chunk.css",
-    "main.js": "/INFT574-Web/static/js/main.4cbfb775.chunk.js",
-    "main.js.map": "/INFT574-Web/static/js/main.4cbfb775.chunk.js.map",
+    "main.js": "/INFT574-Web/static/js/main.98200b46.chunk.js",
+    "main.js.map": "/INFT574-Web/static/js/main.98200b46.chunk.js.map",
     "runtime-main.js": "/INFT574-Web/static/js/runtime-main.1e888d3d.js",
     "runtime-main.js.map": "/INFT574-Web/static/js/runtime-main.1e888d3d.js.map",
     "static/js/2.bce13004.chunk.js": "/INFT574-Web/static/js/2.bce13004.chunk.js",
     "static/js/2.bce13004.chunk.js.map": "/INFT574-Web/static/js/2.bce13004.chunk.js.map",
     "index.html": "/INFT574-Web/index.html",
-    "precache-manifest.8147febb7d39a9776ef4222046d0fabf.js": "/INFT574-Web/precache-manifest.8147febb7d39a9776ef4222046d0fabf.js",
+    "precache-manifest.8a4bd4b0d08837d7240563747de0d0b2.js": "/INFT574-Web/precache-manifest.8a4bd4b0d08837d7240563747de0d0b2.js",
     "service-worker.js": "/INFT574-Web/service-worker.js",
     "static/css/main.3ccf834c.chunk.css.map": "/INFT574-Web/static/css/main.3ccf834c.chunk.css.map",
     "static/js/2.bce13004.chunk.js.LICENSE.txt": "/INFT574-Web/static/js/2.bce13004.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1e888d3d.js",
     "static/js/2.bce13004.chunk.js",
     "static/css/main.3ccf834c.chunk.css",
-    "static/js/main.4cbfb775.chunk.js"
+    "static/js/main.98200b46.chunk.js"
   ]
 }
