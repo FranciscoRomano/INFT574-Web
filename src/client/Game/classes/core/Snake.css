@@ -1,10 +1,9 @@
-.snake {
+#INFT574-block.snake {
     animation: snake-animation 0.2s ease-in-out 0.1s infinite alternate;
-    box-shadow: 0px 0px 2px 0px #fff;
-    border-radius: 3px;
+    box-shadow: 0px 1px 2px 0px #20d800;
 }
 
 @keyframes snake-animation {
-    10%  { transform: rotateZ( 1deg); }
-    100% { transform: rotateZ(-1deg); }  
+    10%  { margin: 4px; padding: 1px; transform: rotateZ( 1deg); }
+    100% { margin: 5px; padding: 0px; transform: rotateZ(-1deg); }  
 }

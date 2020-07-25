@@ -2,22 +2,11 @@
     margin: 5px;
     padding: 0px;
     position: fixed;
+    animation: INFT574-block-animation 1.0s ease-in-out 0.0s infinite alternate;
     border-radius: 1px;
 }
 
-#graphics-block-updated {
-    margin: 4px;
-    padding: 1px;
-    position: fixed;
-    box-shadow: 0px 0px 2px 0px #fff;
-    border-radius: 3px;
-    background-color: #222;
-
-    animation: graphics-block-animation 0.2s ease-in-out 0.0s infinite alternate;
-}
-
-@keyframes graphics-block-animation {
-    0%   { margin: 4px; padding: 1px; transform: rotateZ( 1deg); }
-    100% { margin: 3px; padding: 2px; transform: rotateZ(-1deg); }
-   
+@keyframes INFT574-block-animation {
+    0%   { transform: rotateZ( 0.5deg); }
+    100% { transform: rotateZ(-0.5deg); }  
 }

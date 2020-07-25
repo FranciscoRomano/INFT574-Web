@@ -1,6 +1,6 @@
 #INFT574-block.apple {
     animation: apple-animation 1.0s ease-in-out 0.0s infinite alternate;
-    box-shadow: 0px 0px 2px 0px #fff;
+    box-shadow: 0px 2px 4px 0px #da0000;
 }
 
 @keyframes apple-animation {

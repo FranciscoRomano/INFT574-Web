@@ -12,7 +12,7 @@ export default class Block
     constructor(parent, x, y)
     {
         // public variables
-        this.color = Color3.Random(0.0, 0.2);
+        this.color = Color3.Random(0.1, 0.3);
         this.target = parent.appendChild(document.createElement("div"));
         this.target.id = "INFT574-block";
 

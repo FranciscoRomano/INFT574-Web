@@ -86,9 +86,6 @@ class SnakeManager {
 
     OnKeyDownEvent(e)
     {
-        // check if event repeating
-        if (e.repeat) return;
-
         // calculate direction by key
         let direction = null
         if ((e.keyCode == 87 || e.keyCode == 38)) direction = new Float2( 0,-1);
