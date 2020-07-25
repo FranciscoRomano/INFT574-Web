@@ -2,6 +2,7 @@
 
 import './styles.css'
 import Chat from '../Chat'
+import Game from '../Game'
 import SignIn from "../SignIn"
 import SignUp from "../SignUp"
 // Requirements
@@ -20,9 +21,10 @@ export default class App extends React.Component {
 				<CssBaseline />
 				<Router basename={process.env.PUBLIC_URL}>
 					<Switch>
-						<Route exact path="/"       component={SignIn} />
-						<Route exact path="/chat"   component={Chat}   />
+						<Route exact path="/signin" component={SignIn} />
 						<Route exact path="/signup" component={SignUp} />
+						<Route exact path="/chat"   component={Chat}   />
+						<Route exact path="/game"   component={Game}   />
 					</Switch>
 				</Router>
 			</div>

@@ -1,13 +1,13 @@
 .app-chat-messages {
-    top: 96px !important;
-    left: 50% !important;
-    width: calc(100% - 48px) !important;
-    bottom: 96px !important;
-    display: block !important;
-    padding: 4px !important;
-    position: fixed !important;
-    max-width: 800px !important;
-    transform: translateX(-50%) !important;
-    overflow-y: scroll !important;
-    overflow-x: hidden !important;
+    top: 96px;
+    left: 50%;
+    width: calc(100% - 48px);
+    bottom: 96px;
+    display: block;
+    padding: 4px;
+    position: fixed;
+    max-width: 800px;
+    transform: translateX(-50%);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }

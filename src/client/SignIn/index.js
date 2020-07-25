@@ -53,6 +53,10 @@ export default class SignIn extends React.Component {
 		});
 	};
 
+	componentDidMount(e) {
+		if (Firebase.User) this.props.history.replace('/game');
+	};
+
 	onChangeEmailTextField(e) {
 		this.setState({ email: e.target.value });
 	};

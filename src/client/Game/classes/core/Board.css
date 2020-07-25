@@ -1,0 +1,15 @@
+#INFT574-board {
+    top: 50%;
+    left: 50%;
+    color:#fff;
+    margin: 0px;
+    padding: 5px;
+    overflow: hidden;
+    position: fixed;
+    box-sizing: content-box;
+    transform: translate(-50%, -50%);
+    transition: all ease-in 0.2s;
+    box-shadow: 0px 0px 8px #000;
+    border-radius: 5px;
+    background-color: #000;
+}
