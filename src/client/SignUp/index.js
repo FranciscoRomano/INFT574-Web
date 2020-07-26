@@ -39,7 +39,7 @@ export default class SignUp extends React.Component {
 	}
 
 	onClickBack(e) {
-		this.props.history.replace('/');
+		this.props.history.replace('');
 	};
 
 	onClickSubmit(e) {

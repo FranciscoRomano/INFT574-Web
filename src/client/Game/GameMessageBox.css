@@ -1,24 +1,27 @@
 #INFT574-game-messages {
-    left: calc(50% + 300px);
+    left: calc(50% + 280px);
     width: 300px;
     color: #fff;
-    bottom: calc(50% - 245px);
+    bottom: calc(50% - 230px);
     display: flex;
     position: absolute;
-    max-height: 225px;
-    flex-direction: column;
     animation: INFT574-game-messages-anim 2.0s ease-in-out 0.0s infinite alternate;
+    max-height: 200px;
+    flex-direction: column;
 }
 
 #INFT574-game-messages > p {
+    margin: 0px;
+    padding: 0px;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000;
+    margin-bottom: 8px;
 }
 
 #INFT574-game-messages > div {
     flex-grow: 1;
     overflow-x: hidden;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 @keyframes INFT574-game-messages-anim {

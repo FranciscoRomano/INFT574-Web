@@ -9,14 +9,20 @@
     padding: 0px;
 }
 
+#INFT574-game-message-input:not(.show) {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
 #INFT574-game-message-input > input {
     border: none;
-    padding: 8px;
     outline: none;
+    padding: 16px;
     flex-grow: 1;
     box-shadow: 1px 1px 4px 0px #000;
 }
 
 #INFT574-game-message-input > button {
     display: none;
+    pointer-events: none;
 }

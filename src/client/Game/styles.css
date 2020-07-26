@@ -2,7 +2,7 @@
 
 #snake-game {
     top: 50%;
-    left: 50%;
+    left: calc(50% - 200px);
     position: fixed;
     transform: translate(-50%, -50%) scale(1.2, 1.2);
 }

@@ -135,12 +135,12 @@ export default class Game extends React.Component {
 			case GAME_STATUS_PAUSED:
 				Events.Release();
 				this.pause_menu_div.current.className = "show";
-				document.querySelector("#INFT574-game-message-input").style.display = "";
+				document.querySelector("#INFT574-game-message-input").className = "show";
 				break;
 			case GAME_STATUS_FINISHED:
 				FirebaseLeaderboard.Send(score);
 				this.status_menu_div.current.className = "show";
-				document.querySelector("#INFT574-game-message-input").style.display = "";
+				document.querySelector("#INFT574-game-message-input").className = "show";
 				this.status_menu_div.current.querySelector('p').innerHTML = "YOU " + (SnakeManager.IsSnakeDead() ? "LOST" : "WON");
 				Events.Release();
 				break;
@@ -149,7 +149,6 @@ export default class Game extends React.Component {
     
 	componentDidMount()
 	{
-		document.querySelector("#INFT574-game-message-input").style.display = "none";
 		SnakeManager.Initiate(this.graphics_div.current, 15, 15);
 		status_callback = this.onStatusCallback.bind(this);
 		update_callback = this.onUpdateCallback.bind(this);
@@ -163,7 +162,7 @@ export default class Game extends React.Component {
 	onGameStatusClickPlay() {
 		this.pause_menu_div.current.className = "";
 		this.status_menu_div.current.className = "";
-		document.querySelector("#INFT574-game-message-input").style.display = "none";
+		document.querySelector("#INFT574-game-message-input").className = "";
 		Events.Release();
 		Events.Interval(OnGameUpdate, speed * 1000);
 		Events.Listener(window, "keydown", OnKeyboardDown);
@@ -172,7 +171,7 @@ export default class Game extends React.Component {
 	onGameStatusClickReplay() {
 		this.pause_menu_div.current.className = "";
 		this.status_menu_div.current.className = "";
-		document.querySelector("#INFT574-game-message-input").style.display = "none";
+		document.querySelector("#INFT574-game-message-input").className = "";
 		OnGameReset();
 	};
 };
