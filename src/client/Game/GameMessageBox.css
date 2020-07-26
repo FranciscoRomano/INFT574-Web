@@ -13,6 +13,7 @@
 #INFT574-game-messages > p {
     margin: 0px;
     padding: 0px;
+    font-size: 12pt;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000;
     margin-bottom: 8px;

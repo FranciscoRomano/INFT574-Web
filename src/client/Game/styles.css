@@ -28,21 +28,21 @@
     text-shadow: 2px 2px 4px #000;    
 }
 
-#snake-game .title {
+#snake-game > .title {
     top: calc(50% - 340px);
     left: calc(50% - 240px);
     font-size: 32pt;
     animation-name: snake-game-animation-y;
 }
 
-#snake-game .score {
+#snake-game > .score {
     top: calc(50% - 280px);
     left: calc(50% - 240px);
     font-size: 12pt;
     animation-name: snake-game-animation-y;
 }
 
-#snake-game .level {
+#snake-game > .level {
     top: calc(50% - 280px);
     left: unset;
     right: calc(50% - 240px);

@@ -2,16 +2,15 @@
     top: calc(50% - 290px);
     left: calc(50% + 280px);
     width: 300px;
-    position: absolute;
-    max-height: 300px;
-
-
     color: #fff;
     z-index: 0;
+    position: absolute;
     animation: INFT574-game-messages-anim 2.0s ease-in-out 0.0s infinite alternate;
+    max-height: 300px;
 }
 
 #INFT574-game-leaderboard > p {
+    font-size: 12pt;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000;
 }
