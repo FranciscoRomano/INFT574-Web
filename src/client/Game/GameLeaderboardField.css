@@ -1,0 +1,22 @@
+#INFT574-game-leaderboard-field {
+    width: 100%;
+    color: #a1a1a1;
+    margin: 4px 0px;
+    display: flex;
+    font-weight: bold;
+    flex-direction: row;
+}
+
+#INFT574-game-leaderboard-field > p {
+    margin: 4px 8px;
+}
+
+#INFT574-game-leaderboard-field.selected {
+    color: #000;
+    background-color: #fff;
+}
+
+#INFT574-game-leaderboard-field > p:nth-child(2) {
+    flex-grow: 1;
+    text-align: left;
+}

@@ -9,20 +9,17 @@ class FirebaseMessages {
         this.collection = Firebase.Collection("messages");
     };
 
-    Add(message) {
+    Send(message) {
         return this.collection.add({
-            "username": Firebase.Username,
+            "date": new Date(),
+            "name": Firebase.Username,
+            "userId": Firebase.UserId,
             "message": message,
-            "timestamp": new Date(),
         });
     };
 
-    Get() {
-        return this.collection.get()
-    };
-
     OnSnapshot(callback) {
-        return this.collection.onSnapshot(callback);
+        return this.collection.orderBy("date").onSnapshot(callback);
     };
 
 };

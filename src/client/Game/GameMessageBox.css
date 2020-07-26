@@ -1,0 +1,26 @@
+#INFT574-game-messages {
+    left: calc(50% + 300px);
+    width: 200px;
+    color: #fff;
+    bottom: calc(50% - 245px);
+    display: flex;
+    position: absolute;
+    transform: none !important;
+    max-height: 245px;
+    flex-direction: column;
+}
+
+#INFT574-game-messages > p {
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#INFT574-game-messages > div {
+    overflow: hidden;
+    flex-grow: 1;
+    margin-bottom: 8px;
+}
+
+#INFT574-game-messages > div:hover {
+    overflow-y: scroll;
+}

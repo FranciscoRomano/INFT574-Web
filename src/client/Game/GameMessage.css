@@ -1,0 +1,22 @@
+#INFT574-game-message {
+    color: #fff;
+    display: flex;
+    position: relative;
+    max-width: 300px;
+    flex-direction: row;
+}
+
+#INFT574-game-message > p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#INFT574-game-message > p:nth-child(1) {
+    opacity: 0.5;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+#INFT574-game-message.selected > p:nth-child(1) {
+    opacity: 1.0;
+}

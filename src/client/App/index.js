@@ -10,21 +10,37 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // Material UI - core
 import { CssBaseline } from '@material-ui/core'
+import Firebase from '../../server/Firebase'
 
 //~~ Declarations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-export default class App extends React.Component {
+class Home extends React.Component
+{
+	render()
+	{
+		return null;
+	}
 
-	render() {
+	componentDidMount()
+	{
+		if (Firebase.User) Firebase.SignOut();
+		this.props.history.replace('signin');
+	}
+}
+
+export default class App extends React.Component
+{
+	render()
+	{
 		return (
 			<div>
 				<CssBaseline />
 				<Router basename={process.env.PUBLIC_URL}>
 					<Switch>
-						<Route exact path="/signin" component={SignIn} />
-						<Route exact path="/signup" component={SignUp} />
-						<Route exact path="/chat"   component={Chat}   />
-						<Route exact path="/game"   component={Game}   />
+						<Route exact path="/" component={Home} />
+						<Route path="/game" component={Game} />
+						<Route path="/signin" component={SignIn} />
+						<Route path="/signup" component={SignUp} />
 					</Switch>
 				</Router>
 			</div>

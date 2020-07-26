@@ -8,6 +8,15 @@ import Events from './classes/core/Events';
 import Float2 from './classes/core/Float2';
 import SnakeManager from './classes/SnakeManager';
 
+import FlagIcon from '@material-ui/icons/Flag';
+import ReplayIcon from '@material-ui/icons/Replay';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import GameLeaderboard from './GameLeaderboard';
+import FirebaseLeaderboard from '../../server/FirebaseLeaderboard';
+import Firebase from '../../server/Firebase';
+import GameMessageBox from './GameMessageBox';
+
+
 const GAME_STATUS_START = 0;
 const GAME_STATUS_PAUSED = 1;
 const GAME_STATUS_PLAYING = 2;
@@ -27,9 +36,13 @@ function OnGameReset()
 	score = 0;
 	level = 1;
 	speed = 0.3;
+	status = GAME_STATUS_PLAYING;
 	SnakeManager.Reset();
+	Events.Release();
 	Events.Interval(OnGameUpdate, speed * 1000);
 	Events.Listener(window, "keydown", OnKeyboardDown);
+	update_callback();
+	status_callback();
 };
 
 function OnGameUpdate()
@@ -38,6 +51,7 @@ function OnGameUpdate()
 
 	if (SnakeManager.IsGameOver())
 	{
+		status = GAME_STATUS_FINISHED;
 		Events.Release();
 		if (status_callback) status_callback();
 	}
@@ -82,20 +96,25 @@ export default class Game extends React.Component {
 		this.level_p = React.createRef();
 		this.graphics_div = React.createRef();
 		this.pause_menu_div = React.createRef();
+		this.status_menu_div = React.createRef();
 	};
 
 	render() {
 		return (
 			<div id="snake-game" ref={this.graphics_div}>
+				<GameMessageBox/>
+				<GameLeaderboard/>
 				<p className="title"> SNAKE </p>
-				<p className="stand"> PRESS "ESCAPE" TO PAUSE </p>
 				<p className="level" ref={this.level_p}> LEVEL : {level} </p>
 				<p className="score" ref={this.score_p}> SCORE : {score} </p>
 				<div id="pause-menu" ref={this.pause_menu_div}>
-					PAUSE
-					<input type="button" value="RESUME" onClick={this.onPauseMenuResumeClick.bind(this)}/>
-					<input type="button" value="RESTART"/>
-					<input type="button" value="LEADERBOARD"/>
+					<p> PAUSED </p>
+					<button onClick={this.onGameStatusClickPlay.bind(this)}><PlayArrowIcon/></button>
+					<button onClick={this.onGameStatusClickReplay.bind(this)}><ReplayIcon/></button>
+				</div>
+				<div id="status-menu" ref={this.status_menu_div}>
+					<p> STATUS </p>
+					<button onClick={this.onGameStatusClickReplay.bind(this)}><ReplayIcon/></button>
 				</div>
 			</div>
 		);
@@ -113,30 +132,47 @@ export default class Game extends React.Component {
 			Events.Release();
 		}
 
-		if (status == GAME_STATUS_PAUSED)
+		switch (status)
 		{
-			Events.Release();
-			this.pause_menu_div.current.className = "show";
+			case GAME_STATUS_PAUSED:
+				Events.Release();
+				this.pause_menu_div.current.className = "show";
+				break;
+			case GAME_STATUS_FINISHED:
+				FirebaseLeaderboard.Send(score);
+				this.status_menu_div.current.className = "show";
+				this.status_menu_div.current.querySelector('p').innerHTML = "YOU " + (SnakeManager.IsSnakeDead() ? "LOST" : "WON");
+				Events.Release();
+				break;
 		}
 	};
     
 	componentDidMount()
 	{
-		SnakeManager.Initiate(this.graphics_div.current, 15, 15);
-		status_callback = this.onStatusCallback.bind(this);
-		update_callback = this.onUpdateCallback.bind(this);
-		OnGameReset();
+		//if (Firebase.User) {
+			SnakeManager.Initiate(this.graphics_div.current, 15, 15);
+			status_callback = this.onStatusCallback.bind(this);
+			update_callback = this.onUpdateCallback.bind(this);
+			OnGameReset();
+		//} else this.props.history.replace('');
     };
 
     componentWillUnmount() {
 		Events.Release();
 	};
 
-	onPauseMenuResumeClick() {
+	onGameStatusClickPlay() {
 		this.pause_menu_div.current.className = "";
+		this.status_menu_div.current.className = "";
 		Events.Release();
 		Events.Interval(OnGameUpdate, speed * 1000);
 		Events.Listener(window, "keydown", OnKeyboardDown);
+	};
+
+	onGameStatusClickReplay() {
+		this.pause_menu_div.current.className = "";
+		this.status_menu_div.current.className = "";
+		OnGameReset();
 	};
 };
 

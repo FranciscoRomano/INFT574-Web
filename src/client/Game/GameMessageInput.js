@@ -1,39 +1,35 @@
 //~~ Dependencies ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-import "./ChatInput.css"
+import "./GameMessageInput.css"
 // Requirements
 import React from 'react'
 import FirebaseMessages from '../../server/FirebaseMessages'
-// Material UI - core
-import { Card, InputBase, IconButton } from '@material-ui/core';
-// Material UI - icons
 import SendIcon from '@material-ui/icons/Send';
 
 //~~ Declarations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-export default class ChatInput extends React.Component {
+export default class GameMessageInput extends React.Component
+{
 
-	constructor(props) {
+    constructor()
+    {
 		super(...arguments);
-		this.state = { input: '' };
+		this.state = { "input": "" };
 	};
 
-	render() {
+    render()
+    {
 		return (
-			<Card className="app-chat-input" component="form">
-				<InputBase style={{flexGrow: 1}} value={this.state.input} placeholder="Send Message..." onChange={this.onMsgChange.bind(this)} />
-				<IconButton type="submit" onClick={this.onMsgSubmit.bind(this)}> <SendIcon/> </IconButton>
-			</Card>
+			<form id="INFT574-game-message-input">
+				<input type="text" value={this.state.input} placeholder="message..." onChange={this.onInputChange.bind(this)}/>
+				<button type="submit" onClick={this.onButtonClick.bind(this)}> <SendIcon/> </button>
+			</form>
 		);
-	};
+    };
 
-	onMsgChange(e) {
-		e.preventDefault()
-		this.setState({ input: e.target.value });
-	};
-
-	onMsgSubmit(e) {
-		e.preventDefault();
+    onButtonClick(e)
+    {
+        e.preventDefault();
 		if (this.state.input.length) {
 			console.log('FIREBASE :: sending message...');
 			FirebaseMessages.Send(this.state.input).then(() => {
@@ -43,7 +39,14 @@ export default class ChatInput extends React.Component {
 			});
 			this.setState({ input: '' });
 		}
-	};
+    }
+    
+    onInputChange(e)
+    {
+		e.preventDefault();
+        this.setState({ "input": e.target.value });
+    }
+
 };
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

@@ -29,7 +29,9 @@ class Firebase {
 
     get User() { return this.auth.currentUser; };
 
-    get Username() { return this.User.displayName; };
+    get UserId() { return this.auth.currentUser.uid; };
+
+    get Username() { return this.auth.currentUser.displayName; };
     
     SignIn(email, password) {
         return this.auth.signInWithEmailAndPassword(email, password);

@@ -1,0 +1,13 @@
+#INFT574-game-message-input {
+    display: flex;
+    flex-direction: row;
+}
+
+#INFT574-game-message-input > * {
+    margin: 0px;
+    padding: 0px;
+}
+
+#INFT574-game-message-input > input {
+    flex-grow: 1;
+}

@@ -38,8 +38,8 @@ class Apple
     Reset(board)
     {
         // set apple position in the corner
-        this.position.x = board.width - 1;
-        this.position.y = board.height - 1;
+        this.position.x = board.width - 2;
+        this.position.y = board.height - 2;
 
         // paint new apple on board
         board.paintAt(this.position, this.color, this.tag);

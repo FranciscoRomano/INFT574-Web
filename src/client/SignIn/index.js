@@ -46,7 +46,7 @@ export default class SignIn extends React.Component {
 		console.log("FIREBASE :: signing in...");
 		Firebase.SignIn(this.state.email, this.state.password).then(() => {
 			console.log("FIREBASE :: sign in was successful!");
-			this.props.history.replace('/chat');
+			this.props.history.replace('/game');
 		}).catch(error => {
 			this.setState({ error: error.message });
 			console.error("FIREBASE ERROR :: sign in was unsuccessful!", error);
