@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d65c566ff0d74914502006a55140b4a4",
+    "revision": "f9f0cea5049979ac0642139e864a29b6",
     "url": "/INFT574-Web/index.html"
   },
   {
-    "revision": "c51b89fd2d2a58617805",
-    "url": "/INFT574-Web/static/css/main.ce5c9cee.chunk.css"
+    "revision": "154401cdace19c59a4b9",
+    "url": "/INFT574-Web/static/css/main.8974a7ad.chunk.css"
   },
   {
     "revision": "623a753c8875d1ec49a0",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/INFT574-Web/static/js/2.08000f26.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c51b89fd2d2a58617805",
-    "url": "/INFT574-Web/static/js/main.3af65022.chunk.js"
+    "revision": "154401cdace19c59a4b9",
+    "url": "/INFT574-Web/static/js/main.ea49ecea.chunk.js"
   },
   {
     "revision": "a5d3ac5539d6eddfaf63",
