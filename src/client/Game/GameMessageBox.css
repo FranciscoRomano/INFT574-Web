@@ -16,11 +16,7 @@
 }
 
 #INFT574-game-messages > div {
-    overflow: hidden;
     flex-grow: 1;
+    overflow-x: hidden;
     margin-bottom: 8px;
-}
-
-#INFT574-game-messages > div:hover {
-    overflow-y: scroll;
 }

@@ -21,8 +21,8 @@ export default class GameMessageInput extends React.Component
     {
 		return (
 			<form id="INFT574-game-message-input">
-				<input type="text" value={this.state.input} placeholder="message..." onChange={this.onInputChange.bind(this)}/>
-				<button type="submit" onClick={this.onButtonClick.bind(this)}> <SendIcon/> </button>
+				<input type="text" value={this.state.input} placeholder="Message..." onChange={this.onInputChange.bind(this)}/>
+				<button type="submit" onClick={this.onButtonClick.bind(this)}></button>
 			</form>
 		);
     };
