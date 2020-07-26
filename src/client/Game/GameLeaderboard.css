@@ -1,18 +1,22 @@
 #INFT574-game-leaderboard {
     top: calc(50% - 290px);
     left: calc(50% + 300px);
-    width: 200px;
+    width: 300px;
     position: absolute;
-    transform: none !important;
-    max-height: 245px;
+    max-height: 300px;
 
 
     color: #fff;
     z-index: 0;
-    animation: snake-game-animation-xy 1.0s ease-in-out 0.0s infinite alternate;
+    animation: INFT574-game-messages-anim 2.0s ease-in-out 0.0s infinite alternate;
 }
 
 #INFT574-game-leaderboard > p {
     font-weight: bold;
     text-shadow: 2px 2px 4px #000;
+}
+
+@keyframes INFT574-game-leaderboard-anim {
+    0%   { transform: rotateZ(-0.2deg) scale(1.005, 0.995); }
+    100% { transform: rotateZ( 0.2deg) scale(0.995, 1.005); }
 }

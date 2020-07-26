@@ -1,13 +1,13 @@
 #INFT574-game-messages {
     left: calc(50% + 300px);
-    width: 200px;
+    width: 300px;
     color: #fff;
     bottom: calc(50% - 245px);
     display: flex;
     position: absolute;
-    transform: none !important;
-    max-height: 245px;
+    max-height: 225px;
     flex-direction: column;
+    animation: INFT574-game-messages-anim 2.0s ease-in-out 0.0s infinite alternate;
 }
 
 #INFT574-game-messages > p {
@@ -19,4 +19,9 @@
     flex-grow: 1;
     overflow-x: hidden;
     margin-bottom: 8px;
+}
+
+@keyframes INFT574-game-messages-anim {
+    0%   { transform: rotateZ( 0.2deg) scale(1.005, 0.995); }
+    100% { transform: rotateZ(-0.2deg) scale(0.995, 1.005); }
 }

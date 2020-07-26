@@ -14,7 +14,7 @@ export default class GameLeaderboard extends React.Component {
     constructor(props)
     {
         super(...arguments);
-		this.limit = 15;
+		this.limit = 8;
 		this.state = { fields: [] };
     }
 
@@ -67,7 +67,7 @@ export default class GameLeaderboard extends React.Component {
 		});
 
 		// calculate data range in respect to the user
-		let min_index = Math.max(0, Math.round(username_rank - this.limit / 2));
+		let min_index = Math.max(0, username_rank - this.limit);
 		let max_index = Math.min(snapshot_data.length, min_index + this.limit);
 
 		// set current field state to new snapshot data range

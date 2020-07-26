@@ -102,8 +102,8 @@ export default class Game extends React.Component {
 	render() {
 		return (
 			<div id="snake-game" ref={this.graphics_div}>
-				<GameMessageBox/>
-				<GameLeaderboard/>
+				<GameMessageBox />
+				<GameLeaderboard />
 				<p className="title"> SNAKE </p>
 				<p className="level" ref={this.level_p}> LEVEL : {level} </p>
 				<p className="score" ref={this.score_p}> SCORE : {score} </p>
@@ -137,6 +137,7 @@ export default class Game extends React.Component {
 			case GAME_STATUS_PAUSED:
 				Events.Release();
 				this.pause_menu_div.current.className = "show";
+				document.querySelector("#INFT574-game-message-input").style.display = "";
 				break;
 			case GAME_STATUS_FINISHED:
 				FirebaseLeaderboard.Send(score);
@@ -149,12 +150,11 @@ export default class Game extends React.Component {
     
 	componentDidMount()
 	{
-		//if (Firebase.User) {
-			SnakeManager.Initiate(this.graphics_div.current, 15, 15);
-			status_callback = this.onStatusCallback.bind(this);
-			update_callback = this.onUpdateCallback.bind(this);
-			OnGameReset();
-		//} else this.props.history.replace('');
+		document.querySelector("#INFT574-game-message-input").style.display = "none";
+		SnakeManager.Initiate(this.graphics_div.current, 15, 15);
+		status_callback = this.onStatusCallback.bind(this);
+		update_callback = this.onUpdateCallback.bind(this);
+		OnGameReset();
     };
 
     componentWillUnmount() {
@@ -164,6 +164,7 @@ export default class Game extends React.Component {
 	onGameStatusClickPlay() {
 		this.pause_menu_div.current.className = "";
 		this.status_menu_div.current.className = "";
+		document.querySelector("#INFT574-game-message-input").style.display = "none";
 		Events.Release();
 		Events.Interval(OnGameUpdate, speed * 1000);
 		Events.Listener(window, "keydown", OnKeyboardDown);
@@ -172,6 +173,7 @@ export default class Game extends React.Component {
 	onGameStatusClickReplay() {
 		this.pause_menu_div.current.className = "";
 		this.status_menu_div.current.className = "";
+		document.querySelector("#INFT574-game-message-input").style.display = "none";
 		OnGameReset();
 	};
 };
