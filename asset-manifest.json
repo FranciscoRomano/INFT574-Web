@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/INFT574-Web/static/css/main.2430080d.chunk.css",
-    "main.js": "/INFT574-Web/static/js/main.e242c61f.chunk.js",
-    "main.js.map": "/INFT574-Web/static/js/main.e242c61f.chunk.js.map",
+    "main.css": "/INFT574-Web/static/css/main.ce5c9cee.chunk.css",
+    "main.js": "/INFT574-Web/static/js/main.3af65022.chunk.js",
+    "main.js.map": "/INFT574-Web/static/js/main.3af65022.chunk.js.map",
     "runtime-main.js": "/INFT574-Web/static/js/runtime-main.1e888d3d.js",
     "runtime-main.js.map": "/INFT574-Web/static/js/runtime-main.1e888d3d.js.map",
     "static/js/2.08000f26.chunk.js": "/INFT574-Web/static/js/2.08000f26.chunk.js",
     "static/js/2.08000f26.chunk.js.map": "/INFT574-Web/static/js/2.08000f26.chunk.js.map",
     "index.html": "/INFT574-Web/index.html",
-    "precache-manifest.e5eb4f1dee0383593227da1cc831d09b.js": "/INFT574-Web/precache-manifest.e5eb4f1dee0383593227da1cc831d09b.js",
+    "precache-manifest.0f46f44ddb1fc186af0efae4d39094e9.js": "/INFT574-Web/precache-manifest.0f46f44ddb1fc186af0efae4d39094e9.js",
     "service-worker.js": "/INFT574-Web/service-worker.js",
-    "static/css/main.2430080d.chunk.css.map": "/INFT574-Web/static/css/main.2430080d.chunk.css.map",
+    "static/css/main.ce5c9cee.chunk.css.map": "/INFT574-Web/static/css/main.ce5c9cee.chunk.css.map",
     "static/js/2.08000f26.chunk.js.LICENSE.txt": "/INFT574-Web/static/js/2.08000f26.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1e888d3d.js",
     "static/js/2.08000f26.chunk.js",
-    "static/css/main.2430080d.chunk.css",
-    "static/js/main.e242c61f.chunk.js"
+    "static/css/main.ce5c9cee.chunk.css",
+    "static/js/main.3af65022.chunk.js"
   ]
 }
