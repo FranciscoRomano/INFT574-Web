@@ -1,28 +1,21 @@
 //~~ Dependencies ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
 import './styles.css'
 // Requirements
 import React from 'react'
 import Snake from './classes/core/Snake';
 import Events from './classes/core/Events';
-import Float2 from './classes/core/Float2';
 import SnakeManager from './classes/SnakeManager';
-
-import FlagIcon from '@material-ui/icons/Flag';
 import ReplayIcon from '@material-ui/icons/Replay';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import GameMessageBox from './GameMessageBox';
 import GameLeaderboard from './GameLeaderboard';
 import FirebaseLeaderboard from '../../server/FirebaseLeaderboard';
-import Firebase from '../../server/Firebase';
-import GameMessageBox from './GameMessageBox';
-
+//~~ Declarations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 const GAME_STATUS_START = 0;
 const GAME_STATUS_PAUSED = 1;
 const GAME_STATUS_PLAYING = 2;
 const GAME_STATUS_FINISHED = 3;
-
-//~~ Declarations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 var speed = 0;
 var score = 0;
@@ -49,17 +42,14 @@ function OnGameUpdate()
 {
 	SnakeManager.Update();
 
-	if (SnakeManager.IsGameOver())
-	{
+	if (SnakeManager.IsGameOver()) {
 		status = GAME_STATUS_FINISHED;
 		Events.Release();
 		if (status_callback) status_callback();
 	}
 
-	if (score != SnakeManager.score)
-	{
-		if (Math.sqrt(Snake.length) == (level + 3))
-		{
+	if (score !== SnakeManager.score) {
+		if (Math.sqrt(Snake.length) === (level + 3)) {
 			SnakeManager.score *= ++level;
 			speed = Math.max(speed / 1.25, 0.05);
 			Events.Release();
@@ -78,15 +68,14 @@ function OnKeyboardDown(e)
 	if (e.repeat) return;
 
 	SnakeManager.OnKeyDownEvent(e);
-	if (e.keyCode == 27)
-	{
+	if (e.keyCode === 27) {
 		status = GAME_STATUS_PAUSED;
 		status_callback();
 	}
 };
 
-export default class Game extends React.Component {
-
+export default class Game extends React.Component
+{
 	constructor() {
 		super(...arguments);
 		this.state = { status: GAME_STATUS_START };
@@ -130,8 +119,7 @@ export default class Game extends React.Component {
 			Events.Release();
 		}
 
-		switch (status)
-		{
+		switch (status) {
 			case GAME_STATUS_PAUSED:
 				Events.Release();
 				this.pause_menu_div.current.className = "show";
@@ -143,6 +131,8 @@ export default class Game extends React.Component {
 				document.querySelector("#INFT574-game-message-input").className = "show";
 				this.status_menu_div.current.querySelector('p').innerHTML = "YOU " + (SnakeManager.IsSnakeDead() ? "LOST" : "WON");
 				Events.Release();
+				break;
+			default:
 				break;
 		}
 	};

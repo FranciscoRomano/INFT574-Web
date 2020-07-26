@@ -1,12 +1,8 @@
 //~~ Dependencies ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
 import './Board.css'
 import Block from './Block'
-import Float2 from './Float2'
-
 //~~ Declarations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-// Board object
 export default class Board
 {
     constructor(parent, cols, rows)
@@ -55,9 +51,6 @@ export default class Board
     };
 
 };
-
-// Board static variables
-Board.ID_TAGS = [ "graphics-board-default" ];
 
 Object.defineProperties(Board.prototype, {
     "width": { get() { return this.cols; } },

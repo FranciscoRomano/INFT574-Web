@@ -1,12 +1,9 @@
 //~~ Dependencies ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
 import './Block.css'
 import Float2 from './Float2'
 import Color3 from './Color3'
-
 //~~ Declarations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-// Block object
 export default class Block
 {
     constructor(parent, x, y)
@@ -52,7 +49,6 @@ export default class Block
     };
 };
 
-// Block static variables
 Block.DEFAULT_WIDTH = 32;
 Block.DEFAULT_HEIGHT = 32;
 

@@ -1,17 +1,14 @@
 //~~ Dependencies ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
 import "./GameMessageBox.css"
 import GameMessage from "./GameMessage"
 import GameMessageInput from "./GameMessageInput"
 // Requirements
 import React from 'react'
 import FirebaseMessages from '../../server/FirebaseMessages'
-
 //~~ Declarations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 export default class GameMessageBox extends React.Component
 {
-
     constructor()
     {
 		super(...arguments);
@@ -58,5 +55,6 @@ export default class GameMessageBox extends React.Component
 		snapshot.forEach(doc => { temp.push(doc.data()); });
 		this.setState({ messages: temp.sort((a, b) => a.timestamp - b.timestamp) });
 	};
-
 };
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

@@ -1,9 +1,7 @@
 //~~ Dependencies ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 import './Snake.css'
-import Block from './Block';
 import Color3 from './Color3';
 import Float2 from './Float2';
-import Apple from './Apple';
 //~~ Declarations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 class Snake
@@ -31,7 +29,7 @@ class Snake
         board.paintAt(position, this.color2, this.tag);
 
         return this;
-    }
+    };
 
     Move(board, direction)
     {
@@ -53,9 +51,8 @@ class Snake
         }
         else this.chunks.push(position);
 
-
         return this;
-    }
+    };
 
     Reset(board)
     {

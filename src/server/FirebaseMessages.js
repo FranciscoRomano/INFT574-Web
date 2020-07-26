@@ -2,14 +2,15 @@
 import Firebase from "./Firebase"
 //~~ Declarations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-
-class FirebaseMessages {
-
-    constructor() {
+class FirebaseMessages
+{
+    constructor()
+    {
         this.collection = Firebase.Collection("messages");
     };
 
-    Send(message) {
+    Send(message)
+    {
         return this.collection.add({
             "date": new Date(),
             "name": Firebase.Username,
@@ -18,7 +19,8 @@ class FirebaseMessages {
         });
     };
 
-    OnSnapshot(callback) {
+    OnSnapshot(callback)
+    {
         return this.collection.orderBy("date").onSnapshot(callback);
     };
 

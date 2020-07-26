@@ -88,10 +88,10 @@ class SnakeManager {
     {
         // calculate direction by key
         let direction = null
-        if ((e.keyCode == 87 || e.keyCode == 38)) direction = new Float2( 0,-1);
-        if ((e.keyCode == 83 || e.keyCode == 40)) direction = new Float2( 0, 1);
-        if ((e.keyCode == 65 || e.keyCode == 37)) direction = new Float2(-1, 0);
-        if ((e.keyCode == 68 || e.keyCode == 39)) direction = new Float2( 1, 0);
+        if ((e.keyCode === 87 || e.keyCode === 38)) direction = new Float2( 0,-1);
+        if ((e.keyCode === 83 || e.keyCode === 40)) direction = new Float2( 0, 1);
+        if ((e.keyCode === 65 || e.keyCode === 37)) direction = new Float2(-1, 0);
+        if ((e.keyCode === 68 || e.keyCode === 39)) direction = new Float2( 1, 0);
 
         // check if direction if valid
         if (direction && Float2.Dot(this.moves[1] || this.direction, direction) >= 0.0) {
@@ -107,7 +107,6 @@ class SnakeManager {
 
         return this;
     };
-
 };
 
 Object.defineProperties(SnakeManager.prototype, {
@@ -115,5 +114,5 @@ Object.defineProperties(SnakeManager.prototype, {
 });
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-export default new SnakeManager;
+export default new SnakeManager();
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
