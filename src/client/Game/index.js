@@ -87,10 +87,8 @@ function OnKeyboardDown(e)
 
 export default class Game extends React.Component {
 
-	constructor(props) {
+	constructor() {
 		super(...arguments);
-		//this.state = { status: "won" };
-		//this.state = { status: "lost" };
 		this.state = { status: GAME_STATUS_START };
 		this.score_p = React.createRef();
 		this.level_p = React.createRef();
@@ -142,6 +140,7 @@ export default class Game extends React.Component {
 			case GAME_STATUS_FINISHED:
 				FirebaseLeaderboard.Send(score);
 				this.status_menu_div.current.className = "show";
+				document.querySelector("#INFT574-game-message-input").style.display = "";
 				this.status_menu_div.current.querySelector('p').innerHTML = "YOU " + (SnakeManager.IsSnakeDead() ? "LOST" : "WON");
 				Events.Release();
 				break;
